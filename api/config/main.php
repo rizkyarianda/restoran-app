@@ -1,5 +1,4 @@
 <?php
-$db = require __DIR__ . '/../../common/config/params.php';
 $params = array_merge(
     require __DIR__ . '/../../common/config/main-local.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -34,14 +33,14 @@ return [
             'class' => 'yii2mod\rbac\Module',
         ],
     ],
-    'components' => array_merge([
+    'components' => [
         // 'request' => [
         //     'csrfParam' => '_csrf-api',
         // ],
         'request'=>[
-            // 'class' => 'common\components\Request',
-            // 'web'=> '/api/web',
-            // 'adminUrl' => '/api',
+            'class' => 'common\components\Request',
+            'web'=> '/api/web',
+            'adminUrl' => '/api',
             'enableCookieValidation' => false,
             'enableCsrfValidation' => false,
             'parsers' => [
@@ -67,6 +66,9 @@ return [
                 ],
             ],
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager', // only support DbManager
+        ],
         'api' => [
             'class' => 'common\components\Api',
         ],
@@ -80,6 +82,6 @@ return [
                 'POST oauth2/<action:\w+>' => 'oauth2/rest/<action>',
             ],
         ],
-    ], $db),
+    ],
     'params' => $params,
 ];

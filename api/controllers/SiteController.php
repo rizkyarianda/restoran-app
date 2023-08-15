@@ -51,58 +51,14 @@ class SiteController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'index'  => ['GET'],
-                    'lihat'  => ['GET'],
-                    'unduh'  => ['GET'],
-                    'upload' => ['POST']
                 ],
             ],
         ]);
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
     public function actionIndex()
     {
         return 'Hello World!';
     }
-
-    /**
-     * Login action.
-     *
-     * @return string|Response
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $this->layout = 'blank';
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        $model->password = '';
-
-        return $this->render('login', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Logout action.
-     *
-     * @return Response
-     */
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
+    
 }

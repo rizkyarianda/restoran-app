@@ -5,6 +5,8 @@ namespace common\models;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
+// use app\components\LoggableBehavior;
+use OAuth2\Storage\UserCredentialsInterface;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 
@@ -23,7 +25,7 @@ use yii\web\IdentityInterface;
  * @property integer $updated_at
  * @property string $password write-only password
  */
-class User extends ActiveRecord implements IdentityInterface
+class User extends ActiveRecord implements IdentityInterface, UserCredentialsInterface
 {
     const STATUS_DELETED = 0;
     const STATUS_INACTIVE = 9;
@@ -209,5 +211,50 @@ class User extends ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    public function sendEmail($model)
+    {
+        // print_r($this->attributes());exit;
+        return Yii::$app
+            ->mailer
+            ->compose(
+                ['html' => 'emailVerify-html', 'text' => 'emailVerify-text'],
+                ['user' => $model]
+            )
+            ->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name . ' robot'])
+            ->setTo($this->email)
+            ->setSubject('Account registration at ' . Yii::$app->name)
+            ->send();
+    }
+
+    public function login()
+    {
+        return Yii::$app->user->login($this->getUser(),  3600 * 24 * 30);
+    }
+
+    protected function getUser()
+    {
+        if ($this->_user === null) {
+            $this->_user = User::findByUsername($this->username);
+        }
+
+        return $this->_user;
+    }
+    public function checkUserCredentials($username, $password)
+    {
+        $model = $this->findByUsername($username);
+        if ($model) {
+            return $model->validatePassword($password);
+        }
+        return false;
+    }
+
+    public function getUserDetails($username)
+    {
+        $model = $this->findByUsername($username);
+        return [
+            'user_id' => $model->id
+        ];
     }
 }
