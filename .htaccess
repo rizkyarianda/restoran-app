@@ -1,0 +1,26 @@
+Options +FollowSymlinks
+RewriteEngine On
+# ============================================================================== #
+
+RewriteRule ^bootstrap/(.*)$ frontend/web/bootstrap/$1 [L]
+RewriteRule ^icons/(.*)$ frontend/web/icons/$1 [L]
+RewriteRule ^fontawesome/(.*)$ frontend/web/fontawesome/$1 [L]
+RewriteRule ^css/(.*)$ frontend/web/css/$1 [L]
+RewriteRule ^icon_fonts_assets/(.*)$ frontend/web/icon_fonts_assets/$1 [L]
+RewriteRule ^bower_components/(.*)$ frontend/web/bower_components/$1 [L]
+RewriteRule ^js/(.*)$ frontend/web/js/$1 [L]
+RewriteRule ^document/(.*)$ frontend/web/document/$1 [L]
+RewriteRule ^vendor_components/(.*)$ frontend/web/vendor_components/$1 [L]
+RewriteRule ^img/(.*)$ frontend/web/img/$1 [L]
+RewriteRule ^vendor_plugins/(.*)$ frontend/web/vendor_plugins/$1 [L]
+RewriteRule ^assets/(.*)$ frontend/web/assets/$1 [L]
+RewriteRule ^images/(.*)$ frontend/web/images/$1 [L]
+
+
+# ========Jika tidak memenuhi kondisi di atas, maka arahkan ke index.php======== #
+RewriteCond %{REQUEST_URI} !^/(backend|frontend|pengaturan|pegawai|suratadmin|permintaan)/web/(bootstrap|fontawesome|css|icon_fonts_assets|bower_components|js|document|img|vendor_components|assets|plugin|css2)/
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ frontend/web/index.php
+# ============================================================================== #
