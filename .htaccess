@@ -1,6 +1,9 @@
+
 Options +FollowSymlinks
 RewriteEngine On
 # ============================================================================== #
+# RewriteCond %{HTTP:Authorization} .
+# RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 RewriteRule ^bootstrap/(.*)$ frontend/web/bootstrap/$1 [L]
 RewriteRule ^icons/(.*)$ frontend/web/icons/$1 [L]

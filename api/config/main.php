@@ -10,7 +10,7 @@ return [
     'id' => 'app-api',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'api\controllers',
-    'bootstrap' => ['log'],
+    // 'bootstrap' => ['log'],
     'modules' => [
         'oauth2' => [
             'class' => 'filsh\yii2\oauth2server\Module',
@@ -57,6 +57,13 @@ return [
             // this is the name of the session cookie used for login on the api
             'name' => 'advanced-api',
         ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                'POST oauth2/<action:\w+>' => 'oauth2/rest/<action>',
+            ],
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -74,13 +81,6 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
-        ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-                'POST oauth2/<action:\w+>' => 'oauth2/rest/<action>',
-            ],
         ],
     ],
     'params' => $params,

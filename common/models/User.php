@@ -74,7 +74,12 @@ class User extends ActiveRecord implements IdentityInterface, UserCredentialsInt
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
+        $module = Yii::$app->getModule('oauth2');
+        $token = $module->getServer()->getResourceController()->getToken();
+        
+        return !empty($token['user_id'])
+            ? static::findIdentity($token['user_id'])
+            : null;
     }
 
     /**
@@ -241,13 +246,11 @@ class User extends ActiveRecord implements IdentityInterface, UserCredentialsInt
 
         return $this->_user;
     }
+    
     public function checkUserCredentials($username, $password)
     {
         $model = $this->findByUsername($username);
-        if ($model) {
-            return $model->validatePassword($password);
-        }
-        return false;
+        return $model;
     }
 
     public function getUserDetails($username)

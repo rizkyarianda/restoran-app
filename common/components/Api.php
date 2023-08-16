@@ -5,6 +5,8 @@ namespace common\components;
 use Yii;
 use yii\base\Component;
 use yii\helpers\Inflector;
+use yii\helpers\Url;
+use yii\httpclient\Client;
 
 
 class Api extends Component {
@@ -22,4 +24,35 @@ class Api extends Component {
 
         return true;
     }
+
+    public function token(){
+
+        $url = Url::base(true).'/api';
+        $username = 'admin';
+        $password = '12345678';
+
+        $client = new Client();
+        $response = $client->createRequest()
+        ->setMethod('POST')
+        ->setUrl("$url/oauth2/token")
+        ->addHeaders([
+            'Content-Type' => 'application/x-www-form-urlencoded',
+        ])
+        ->setData([
+            'grant_type' => 'password',
+            'username' => $username,
+            'password' => $password,
+            'client_id' => 'testclient',
+            'client_secret' => 'testpass',
+        ])
+        ->send();
+
+        if(isset($response->data['access_token']) ){
+            return $response->data['access_token'];
+        }
+        else{
+            return false;
+        }
+    }
+
 } 

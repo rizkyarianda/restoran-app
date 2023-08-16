@@ -11,10 +11,13 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use Exception;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\helpers\Url;
+use yii\httpclient\Client;
 
 /**
  * Site controller
@@ -76,6 +79,33 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionDaftarBahan()
+    {
+        try {
+            $token = Yii::$app->api->token();
+            $url = Url::base(true).'/api/site/get-bahan';
+            $client = new Client();
+
+            $response = $client->createRequest()
+                    ->setMethod('GET')
+                    ->setUrl("$url")
+                    ->addHeaders(['Content-Type' => 'application/json','Authorization' => "Bearer $token"])
+                    ->send();
+
+            echo "<pre>";
+            print_r($response);
+            echo "</pre>";
+            exit();
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+
+        // return $this->render('index', [
+        //     'searchModel' => $searchModel,
+        //     'dataProvider' => $dataProvider,
+        // ]);
     }
 
     /**
@@ -144,6 +174,11 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionDataMaster()
+    {
+        return $this->render('data-master');
     }
 
     /**
