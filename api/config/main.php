@@ -11,6 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'api\controllers',
     // 'bootstrap' => ['log'],
+    'bootstrap' => ['oauth2'],
     'modules' => [
         'oauth2' => [
             'class' => 'filsh\yii2\oauth2server\Module',
@@ -29,9 +30,9 @@ return [
                 ]
             ]
         ],
-        'rbac' => [
-            'class' => 'yii2mod\rbac\Module',
-        ],
+        // 'rbac' => [
+        //     'class' => 'yii2mod\rbac\Module',
+        // ],
     ],
     'components' => [
         // 'request' => [

@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var frontend\models\BahanSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Bahans';
+$this->title = 'Daftar Bahan';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="bahan-index">
@@ -18,27 +18,34 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Bahan', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Tambah Bahan', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); 
+    ?>
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id_bahan',
-            'nama_bahan',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, bahan $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id_bahan' => $model->id_bahan]);
-                 }
-            ],
-        ],
-    ]); ?>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nama Menu</th>
+                <th scope="col">Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($dataProvider as $key => $value) : ?>
+            <tr>
+                <th scope="row"><?= $key + 1 ?></th>
+                <td><?= $value['nama_bahan'] ?></td>
+                <td>
+                    <?= Html::a('<span class="fa fa-eye"></span>', ['/bahan/view', 'id_bahan' => $value['id_bahan']])?>
+                    <?= Html::a('<span class="fa fa-pencil"></span>', ['/bahan/update', 'id_bahan' => $value['id_bahan']])?>
+                    <?= Html::a('<span class="fa fa-trash"></span>', ['/bahan/delete', 'id_bahan' => $value['id_bahan']])?>
+                </td>
+            </tr>
+            <?php endforeach ?>
+        </tbody>
+        </table>
 
 
 </div>

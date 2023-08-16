@@ -7,12 +7,10 @@ use common\models\Kategori;
 use common\models\LoginForm;
 use Error;
 use Exception;
+use filsh\yii2\oauth2server\filters\auth\CompositeAuth;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use yii\filters\auth\CompositeAuth;
-use yii\filters\auth\HttpBearerAuth;
-use yii\filters\auth\QueryParamAuth;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\Response;
@@ -20,6 +18,8 @@ use filsh\yii2\oauth2server\filters\ErrorToExceptionFilter;
 use frontend\models\BahanSearch;
 use frontend\models\KategoriSearch;
 use yii\base\Event;
+use yii\filters\auth\HttpBearerAuth;
+use yii\filters\auth\QueryParamAuth;
 use yii\web\NotFoundHttpException;
 
 use function PHPUnit\Framework\isNan;
@@ -64,9 +64,9 @@ class SiteController extends Controller
                     'create-bahan-atau-kategori'  => ['POST'],
                     'get-bahan'  => ['GET'],
                     'get-kategori'  => ['GET'],
-                    'update-kategori-atau-bahan'  => ['POST'],
-                    'delete-bahan'  => ['POST'],
-                    'delete-kategori'  => ['POST'],
+                    'update-kategori-atau-bahan'  => ['PUT','PATCH'],
+                    'delete-bahan'  => ['DELETE'],
+                    'delete-kategori'  => ['DELETE'],
                 ],
             ],
         ]);
@@ -83,7 +83,8 @@ class SiteController extends Controller
         $dataProvider = $searchModel->search($this->request->queryParams);
         
         return [
-            'data' => $dataProvider->models
+            'data' => $dataProvider->models,
+            // 'searchModel' => $searchModel,
         ];
     }
    

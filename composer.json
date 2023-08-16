@@ -16,11 +16,15 @@
     "require": {
         "php": ">=7.1.0",
         "yiisoft/yii2": "~2.0.45",
-        "yiisoft/yii2-bootstrap5": "~2.0.2",
         "yiisoft/yii2-symfonymailer": "~2.0.3",
         "filsh/yii2-oauth2-server": "*",
+        "yiisoft/yii2-bootstrap4": "~2.0.6",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
         "yii2mod/yii2-rbac": "*",
-        "yiisoft/yii2-httpclient": "^2.0"
+        "yiisoft/yii2-httpclient": "^2.0",
+        "rmrevin/yii2-fontawesome": "~3.5",
+        "kartik-v/yii2-widget-select2": "dev-master",
+        "kartik-v/yii2-grid": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

@@ -21,7 +21,7 @@ $this->title = 'Resep Menu';
             </div>
             <div class="col-lg-4 text-center">
                 <h2>Daftar Kategori</h2>
-                <p><a class="btn btn-outline-secondary" href="<?= Url::to('site/daftar-kategori') ?>">Pilih &raquo;</a></p>
+                <p><a class="btn btn-outline-secondary" href="<?= Url::to('daftar-kategori') ?>">Pilih &raquo;</a></p>
             </div>
             <!-- <div class="col-lg-4">
                 <h2>Heading</h2>
