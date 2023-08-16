@@ -9,6 +9,12 @@ return [
         'cache' => [
             'class' => \yii\caching\FileCache::class,
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
+        'api' =>[
+            'class' => 'common\components\Api',
+        ],
     ],
     'modules' => [
         'gii' => [

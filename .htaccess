@@ -1,6 +1,9 @@
+
 Options +FollowSymlinks
 RewriteEngine On
 # ============================================================================== #
+# RewriteCond %{HTTP:Authorization} .
+# RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 RewriteRule ^bootstrap/(.*)$ frontend/web/bootstrap/$1 [L]
 RewriteRule ^icons/(.*)$ frontend/web/icons/$1 [L]
@@ -23,4 +26,25 @@ RewriteCond %{REQUEST_URI} !index.php
 RewriteCond %{REQUEST_FILENAME} !-f [OR]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^.*$ frontend/web/index.php
+# ============================================================================== #
+
+# API
+RewriteCond %{REQUEST_URI} ^/(api)
+RewriteRule ^api/bootstrap/(.*)$ api/web/bootstrap/$1 [L]
+RewriteRule ^api/icons/(.*)$ api/web/icons/$1 [L]
+RewriteRule ^api/fontawesome/(.*)$ api/web/fontawesome/$1 [L]
+RewriteRule ^api/css/(.*)$ api/web/css/$1 [L]
+RewriteRule ^api/icon_fonts_assets/(.*)$ api/web/icon_fonts_assets/$1 [L]
+RewriteRule ^api/bower_components/(.*)$ api/web/bower_components/$1 [L]
+RewriteRule ^api/js/(.*)$ api/web/js/$1 [L]
+RewriteRule ^api/document/(.*)$ api/web/document/$1 [L]
+RewriteRule ^api/vendor_components/(.*)$ api/web/vendor_components/$1 [L]
+RewriteRule ^api/img/(.*)$ api/web/img/$1 [L]
+RewriteRule ^api/vendor_plugins/(.*)$ api/web/vendor_plugins/$1 [L]
+RewriteRule ^api/assets/(.*)$ api/web/assets/$1 [L]
+RewriteRule ^api/images/(.*)$ api/web/images/$1 [L]
+# ========Jika tidak memenuhi kondisi di atas, maka arahkan ke index.php======== #
+RewriteCond %{REQUEST_URI} !^/api/web/(bootstrap|fontawesome|css|icons|icon_fonts_assets|images|bower_components|js|vendor_components|document|vendor_plugins|img|assets)/
+RewriteCond %{REQUEST_URI} ^/(api)
+RewriteRule ^.*$ api/web/index.php [L]
 # ============================================================================== #
