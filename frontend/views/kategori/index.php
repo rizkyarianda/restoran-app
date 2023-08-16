@@ -1,28 +1,26 @@
 <?php
 
-use common\models\bahan;
+use common\models\kategori;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var frontend\models\BahanSearch $searchModel */
+/** @var frontend\models\KategoriSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Daftar Bahan';
+$this->title = 'Daftar Kategori';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
-<div class="bahan-index">
+<div class="kategori-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Tambah Bahan', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Tambah Kategori', ['/kategori/create'], ['class' => 'btn btn-success']) ?>
     </p>
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); 
-    ?>
 
     <table class="table">
         <thead>
@@ -36,16 +34,17 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php foreach($dataProvider as $key => $value) : ?>
             <tr>
                 <th scope="row"><?= $key + 1 ?></th>
-                <td><?= $value['nama_bahan'] ?></td>
+                <td><?= $value['nama_kategori'] ?></td>
                 <td>
-                    <?= Html::a('<span class="fa fa-eye"></span>', ['/bahan/view', 'id_bahan' => $value['id_bahan']])?>
-                    <?= Html::a('<span class="fa fa-pencil"></span>', ['/bahan/update', 'id_bahan' => $value['id_bahan']])?>
-                    <?= Html::a('<span class="fa fa-trash"></span>', ['/bahan/delete', 'id_bahan' => $value['id_bahan']])?>
+                    <?= Html::a('<span class="fa fa-eye"></span>', ['/kategori/view', 'id_kategori' => $value['id_kategori']])?>
+                    <?= Html::a('<span class="fa fa-pencil"></span>', ['/kategori/update', 'id_kategori' => $value['id_kategori']])?>
+                    <?= Html::a('<span class="fa fa-trash"></span>', ['/kategori/delete', 'id_kategori' => $value['id_kategori']])?>
                 </td>
             </tr>
             <?php endforeach ?>
         </tbody>
-        </table>
+    </table>
+
 
 
 </div>

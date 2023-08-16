@@ -11,11 +11,16 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\User;
 use Exception;
+use frontend\models\BahanSearch;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\KategoriSearch;
+use frontend\models\MenuSearch;
+use yii\data\ActiveDataProvider;
 use yii\helpers\Url;
 use yii\httpclient\Client;
 
@@ -83,29 +88,31 @@ class SiteController extends Controller
 
     public function actionDaftarBahan()
     {
-        try {
-            $token = Yii::$app->api->token();
-            $url = Url::base(true).'/api/site/get-bahan';
-            $client = new Client();
+        $response = Yii::$app->api->responseApiRead('get-bahan');
+        $dataProvider = $response->data['data'];
 
-            $response = $client->createRequest()
-                    ->setMethod('GET')
-                    ->setUrl("$url")
-                    ->addHeaders(['Content-Type' => 'application/json','Authorization' => "Bearer $token"])
-                    ->send();
+        return $this->render('/bahan/index', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
 
-            echo "<pre>";
-            print_r($response);
-            echo "</pre>";
-            exit();
-        } catch (Exception $e) {
-            return $e->getMessage();
-        }
+    public function actionDaftarKategori(){
+        $response = Yii::$app->api->responseApiRead('get-kategori');
+        $dataProvider = $response->data['data'];
 
-        // return $this->render('index', [
-        //     'searchModel' => $searchModel,
-        //     'dataProvider' => $dataProvider,
-        // ]);
+        return $this->render('/kategori/index', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionDaftarMenu(){
+        $searchModel = new MenuSearch();
+        $dataProvider = $searchModel->search($this->request->queryParams);
+
+        return $this->render('/menu/index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     /**
@@ -120,7 +127,7 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        if ($model->load(Yii::$app->request->post()) && $model->login() && Yii::$app->api->createToken()) {
             return $this->goBack();
         }
 

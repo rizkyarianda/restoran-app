@@ -15936,3 +15936,1235 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1692162011.2538
     'REQUEST_TIME' => 1692162011
 ]
+2023-08-16 08:22:32 [127.0.0.1][-][tom6neulkp8n9njt71rsl66939][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(59): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 /Users/rizky/Sites/restoran-app/vendor/filsh/yii2-oauth2-server/src/filters/auth/CompositeAuth.php(17): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Controller.php(218): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(40): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#9 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(176): api\controllers\SiteController->beforeAction(Object(yii\base\InlineAction))
+#10 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('delete-bahan', Array)
+#11 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/delete-bah...', Array)
+#12 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#13 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#14 {main}
+2023-08-16 08:22:32 [127.0.0.1][-][tom6neulkp8n9njt71rsl66939][info][application] $_GET = [
+    'idBahan' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'bhZBtpoa2h1-s1ZyzF7g0mqdVHQDRhyK'
+    'advanced-api' => 'tom6neulkp8n9njt71rsl66939'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '99c00feb-2c60-43b0-b31a-48c4df5ad10c'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=bhZBtpoa2h1-s1ZyzF7g0mqdVHQDRhyK; advanced-api=tom6neulkp8n9njt71rsl66939'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50464'
+    'REDIRECT_URL' => '/api/site/delete-bahan'
+    'REDIRECT_QUERY_STRING' => 'idBahan=4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'idBahan=4'
+    'REQUEST_URI' => '/api/site/delete-bahan?idBahan=4'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174152.2591
+    'REQUEST_TIME' => 1692174152
+]
+2023-08-16 08:22:44 [127.0.0.1][1][t9bgfsnq196qbokro1n49bu07m][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This URL can only handle the following request methods: POST. in /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/VerbFilter.php:108
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Controller.php(218): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(40): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(176): api\controllers\SiteController->beforeAction(Object(yii\base\InlineAction))
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('delete-bahan', Array)
+#7 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/delete-bah...', Array)
+#8 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#9 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2023-08-16 08:22:44 [127.0.0.1][1][t9bgfsnq196qbokro1n49bu07m][info][application] $_GET = [
+    'idBahan' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'bhZBtpoa2h1-s1ZyzF7g0mqdVHQDRhyK'
+    'advanced-api' => 'tom6neulkp8n9njt71rsl66939'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'c1bae5b3-22e5-40d4-80b4-1759013dd70f'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=bhZBtpoa2h1-s1ZyzF7g0mqdVHQDRhyK; advanced-api=tom6neulkp8n9njt71rsl66939'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50481'
+    'REDIRECT_URL' => '/api/site/delete-bahan'
+    'REDIRECT_QUERY_STRING' => 'idBahan=4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'idBahan=4'
+    'REQUEST_URI' => '/api/site/delete-bahan?idBahan=4'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174164.0384
+    'REQUEST_TIME' => 1692174164
+]
+2023-08-16 08:22:52 [127.0.0.1][1][lg9p6igtp2m1kjq2kciulbhdlk][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This URL can only handle the following request methods: POST. in /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/VerbFilter.php:108
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Controller.php(218): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(40): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(176): api\controllers\SiteController->beforeAction(Object(yii\base\InlineAction))
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('delete-bahan', Array)
+#7 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/delete-bah...', Array)
+#8 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#9 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2023-08-16 08:22:52 [127.0.0.1][1][lg9p6igtp2m1kjq2kciulbhdlk][info][application] $_GET = [
+    'idBahan' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'KVYaGsSz-XOQO3-WRarIsyalzzQRgq7p'
+    'advanced-api' => 't9bgfsnq196qbokro1n49bu07m'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '2f45c754-a16c-4b4c-88dc-0f1e4719c6b5'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=KVYaGsSz-XOQO3-WRarIsyalzzQRgq7p; advanced-api=t9bgfsnq196qbokro1n49bu07m'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50492'
+    'REDIRECT_URL' => '/api/site/delete-bahan'
+    'REDIRECT_QUERY_STRING' => 'idBahan=4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'DELETE'
+    'QUERY_STRING' => 'idBahan=4'
+    'REQUEST_URI' => '/api/site/delete-bahan?idBahan=4'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174172.1709
+    'REQUEST_TIME' => 1692174172
+]
+2023-08-16 08:22:58 [127.0.0.1][1][d0uugjfht2rqn6h25oridu6dvg][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:204
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(174): api\controllers\SiteController->findModelBahan('4')
+#1 [internal function]: api\controllers\SiteController->actionDeleteBahan('4')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('delete-bahan', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/delete-bah...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:22:57 [127.0.0.1][1][d0uugjfht2rqn6h25oridu6dvg][info][application] $_GET = [
+    'idBahan' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'mFGe4wnYQpYLFi921rAg5KKanuj2uO2a'
+    'advanced-api' => 'lg9p6igtp2m1kjq2kciulbhdlk'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '0a758876-70b7-4161-afb1-2e255bf7db3c'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=mFGe4wnYQpYLFi921rAg5KKanuj2uO2a; advanced-api=lg9p6igtp2m1kjq2kciulbhdlk'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50501'
+    'REDIRECT_URL' => '/api/site/delete-bahan'
+    'REDIRECT_QUERY_STRING' => 'idBahan=4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'idBahan=4'
+    'REQUEST_URI' => '/api/site/delete-bahan?idBahan=4'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174177.7919
+    'REQUEST_TIME' => 1692174177
+]
+2023-08-16 08:23:21 [127.0.0.1][1][847te241a9shp60chcjim72c1q][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This URL can only handle the following request methods: DELETE. in /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/VerbFilter.php:108
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Controller.php(218): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(40): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(176): api\controllers\SiteController->beforeAction(Object(yii\base\InlineAction))
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('delete-bahan', Array)
+#7 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/delete-bah...', Array)
+#8 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#9 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2023-08-16 08:23:21 [127.0.0.1][1][847te241a9shp60chcjim72c1q][info][application] $_GET = [
+    'idBahan' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'oUozM6EcKGUcIWUJQSAztkIJuYCekrI4'
+    'advanced-api' => 'd0uugjfht2rqn6h25oridu6dvg'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'b4ef5723-41ad-46d2-b4fa-42c455c88a29'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=oUozM6EcKGUcIWUJQSAztkIJuYCekrI4; advanced-api=d0uugjfht2rqn6h25oridu6dvg'
+    'CONTENT_LENGTH' => '0'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50534'
+    'REDIRECT_URL' => '/api/site/delete-bahan'
+    'REDIRECT_QUERY_STRING' => 'idBahan=4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'idBahan=4'
+    'REQUEST_URI' => '/api/site/delete-bahan?idBahan=4'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174201.1202
+    'REQUEST_TIME' => 1692174201
+]
+2023-08-16 08:23:26 [127.0.0.1][1][72qa6bfk1p4kp2o9aeekfamggu][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:204
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(174): api\controllers\SiteController->findModelBahan('4')
+#1 [internal function]: api\controllers\SiteController->actionDeleteBahan('4')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('delete-bahan', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/delete-bah...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:23:26 [127.0.0.1][1][72qa6bfk1p4kp2o9aeekfamggu][info][application] $_GET = [
+    'idBahan' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'xNU_R29dQv5qj3U_X1WpyrLo4LDL23zq'
+    'advanced-api' => '847te241a9shp60chcjim72c1q'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '9d853ec3-7040-460c-95d4-2756e6d74e3c'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=xNU_R29dQv5qj3U_X1WpyrLo4LDL23zq; advanced-api=847te241a9shp60chcjim72c1q'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50534'
+    'REDIRECT_URL' => '/api/site/delete-bahan'
+    'REDIRECT_QUERY_STRING' => 'idBahan=4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'DELETE'
+    'QUERY_STRING' => 'idBahan=4'
+    'REQUEST_URI' => '/api/site/delete-bahan?idBahan=4'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174206.3779
+    'REQUEST_TIME' => 1692174206
+]
+2023-08-16 08:24:04 [127.0.0.1][1][kj8t2ligah21c3m5d0qmejkn1n][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:204
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(174): api\controllers\SiteController->findModelBahan('4')
+#1 [internal function]: api\controllers\SiteController->actionDeleteBahan('4')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('delete-bahan', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/delete-bah...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:24:03 [127.0.0.1][1][kj8t2ligah21c3m5d0qmejkn1n][info][application] $_GET = [
+    'idBahan' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'Xgl201hyLlNMlbm34VsUcEqPPRbYz200'
+    'advanced-api' => '72qa6bfk1p4kp2o9aeekfamggu'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '3b3756b9-0b2d-479c-8d4d-ecae1606e1b7'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=Xgl201hyLlNMlbm34VsUcEqPPRbYz200; advanced-api=72qa6bfk1p4kp2o9aeekfamggu'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50593'
+    'REDIRECT_URL' => '/api/site/delete-bahan'
+    'REDIRECT_QUERY_STRING' => 'idBahan=4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'DELETE'
+    'QUERY_STRING' => 'idBahan=4'
+    'REQUEST_URI' => '/api/site/delete-bahan?idBahan=4'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174243.5619
+    'REQUEST_TIME' => 1692174243
+]
+2023-08-16 08:24:37 [127.0.0.1][1][kj8t2ligah21c3m5d0qmejkn1n][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(59): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 /Users/rizky/Sites/restoran-app/vendor/filsh/yii2-oauth2-server/src/filters/auth/CompositeAuth.php(17): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/ActionFilter.php(77): filsh\yii2\oauth2server\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Controller.php(218): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(40): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#9 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(176): api\controllers\SiteController->beforeAction(Object(yii\base\InlineAction))
+#10 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#11 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#12 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#13 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#14 {main}
+2023-08-16 08:24:37 [127.0.0.1][1][kj8t2ligah21c3m5d0qmejkn1n][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = [
+    'namaKategoriAtauBahan' => 'kerupuk'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'iBo7ehGkjx0JPVGQBtIMcs3iJKtNT12M'
+    'advanced-api' => 'kj8t2ligah21c3m5d0qmejkn1n'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'c55faed4-03ed-4a6b-944d-0092222a020d'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------223003872664414318882795'
+    'HTTP_COOKIE' => '_csrf=iBo7ehGkjx0JPVGQBtIMcs3iJKtNT12M; advanced-api=kj8t2ligah21c3m5d0qmejkn1n'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50631'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174277.134
+    'REQUEST_TIME' => 1692174277
+]
+2023-08-16 08:24:44 [127.0.0.1][1][481ef6nfukc928stl6jugm6in8][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This URL can only handle the following request methods: PUT. in /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/VerbFilter.php:108
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Controller.php(218): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(40): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(176): api\controllers\SiteController->beforeAction(Object(yii\base\InlineAction))
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#7 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#8 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#9 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2023-08-16 08:24:43 [127.0.0.1][1][481ef6nfukc928stl6jugm6in8][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = [
+    'namaKategoriAtauBahan' => 'kerupuk'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'iBo7ehGkjx0JPVGQBtIMcs3iJKtNT12M'
+    'advanced-api' => 'kj8t2ligah21c3m5d0qmejkn1n'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '51946acb-f8a2-491e-9558-2cae73fab3e3'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------287069971541262834479900'
+    'HTTP_COOKIE' => '_csrf=iBo7ehGkjx0JPVGQBtIMcs3iJKtNT12M; advanced-api=kj8t2ligah21c3m5d0qmejkn1n'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50642'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174283.9752
+    'REQUEST_TIME' => 1692174283
+]
+2023-08-16 08:24:49 [127.0.0.1][1][t19oe74f0p0tevl7bmhgkdr3j1][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined property: stdClass::$namaKategoriAtauBahan in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:143
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(143): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/Users/rizky/Si...', 143, Array)
+#1 [internal function]: api\controllers\SiteController->actionUpdateKategoriAtauBahan('bahan', '1')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:24:48 [127.0.0.1][1][t19oe74f0p0tevl7bmhgkdr3j1][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'ox86BY_WC9adH1KdOhDj1ISNL40a_jIx'
+    'advanced-api' => '481ef6nfukc928stl6jugm6in8'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '259b2e56-5f58-442a-be58-cd51aabdbe2b'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------919273639593857419266855'
+    'HTTP_COOKIE' => '_csrf=ox86BY_WC9adH1KdOhDj1ISNL40a_jIx; advanced-api=481ef6nfukc928stl6jugm6in8'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50642'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174288.768
+    'REQUEST_TIME' => 1692174288
+]
+2023-08-16 08:26:05 [127.0.0.1][1][gb8cdt08cvelljbais46vucpgv][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined property: stdClass::$namaKategoriAtauBahan in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:141
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(141): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/Users/rizky/Si...', 141, Array)
+#1 [internal function]: api\controllers\SiteController->actionUpdateKategoriAtauBahan('bahan', '1')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:26:05 [127.0.0.1][1][gb8cdt08cvelljbais46vucpgv][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'UV5fAs9_pd0elyZsKoupBuuBmcCoIW07'
+    'advanced-api' => '6tqn0g5e8k18bcl69k1ccc2085'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '1b8ac719-03a5-47c9-a853-2e3aa96ab866'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------147204791804065549796087'
+    'HTTP_COOKIE' => '_csrf=UV5fAs9_pd0elyZsKoupBuuBmcCoIW07; advanced-api=6tqn0g5e8k18bcl69k1ccc2085'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50748'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174365.4017
+    'REQUEST_TIME' => 1692174365
+]
+2023-08-16 08:27:06 [127.0.0.1][1][tr5gcabi0vre3e0l9sj724oaag][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined property: stdClass::$name in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:141
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(141): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/Users/rizky/Si...', 141, Array)
+#1 [internal function]: api\controllers\SiteController->actionUpdateKategoriAtauBahan('bahan', '1')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:27:06 [127.0.0.1][1][tr5gcabi0vre3e0l9sj724oaag][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'EZk3Oug7qzSuA0WatrznqHKKlaVY0wES'
+    'advanced-api' => 'pt2prgcedruvr3h5jd51cmoooh'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '43b3cd0f-0062-4727-9a36-11fd4b81da80'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------635531384226968813248310'
+    'HTTP_COOKIE' => '_csrf=EZk3Oug7qzSuA0WatrznqHKKlaVY0wES; advanced-api=pt2prgcedruvr3h5jd51cmoooh'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50829'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174426.3778
+    'REQUEST_TIME' => 1692174426
+]
+2023-08-16 08:27:14 [127.0.0.1][1][f9p7jl3bcakovrl8v4a7m7deog][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined property: stdClass::$_name in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:141
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(141): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/Users/rizky/Si...', 141, Array)
+#1 [internal function]: api\controllers\SiteController->actionUpdateKategoriAtauBahan('bahan', '1')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:27:14 [127.0.0.1][1][f9p7jl3bcakovrl8v4a7m7deog][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'PtXTkS0PSe0A1b0RtbqtX8aRdny4yKp2'
+    'advanced-api' => 'tr5gcabi0vre3e0l9sj724oaag'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '7041a8a6-180a-4a2b-b643-27d5fbfcf169'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------617018533771276897537987'
+    'HTTP_COOKIE' => '_csrf=PtXTkS0PSe0A1b0RtbqtX8aRdny4yKp2; advanced-api=tr5gcabi0vre3e0l9sj724oaag'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50842'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174434.6964
+    'REQUEST_TIME' => 1692174434
+]
+2023-08-16 08:27:33 [127.0.0.1][1][803ona3279imchpeiso7ogomau][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined property: stdClass::$_name in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:141
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(141): yii\base\ErrorHandler->handleError(8, 'Undefined prope...', '/Users/rizky/Si...', 141, Array)
+#1 [internal function]: api\controllers\SiteController->actionUpdateKategoriAtauBahan('bahan', '1')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:27:33 [127.0.0.1][1][803ona3279imchpeiso7ogomau][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = [
+    'namaKategoriAtauBahan' => 'kerupuk'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'RiZIY9bxOnFCdSdieAD_agJ_0rZ7L8FQ'
+    'advanced-api' => 'f9p7jl3bcakovrl8v4a7m7deog'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '194d5623-fb55-497c-a0e1-f64610bbd99e'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------921743905459195528460825'
+    'HTTP_COOKIE' => '_csrf=RiZIY9bxOnFCdSdieAD_agJ_0rZ7L8FQ; advanced-api=f9p7jl3bcakovrl8v4a7m7deog'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '50869'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174453.1768
+    'REQUEST_TIME' => 1692174453
+]
+2023-08-16 08:30:41 [127.0.0.1][1][ir2hno24gvhlg87cvfickdbf4k][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This URL can only handle the following request methods: PUT. in /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/filters/VerbFilter.php:108
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Component.php(633): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Controller.php(218): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(40): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(176): api\controllers\SiteController->beforeAction(Object(yii\base\InlineAction))
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#7 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#8 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#9 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2023-08-16 08:30:41 [127.0.0.1][1][ir2hno24gvhlg87cvfickdbf4k][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = [
+    'namaKategoriAtauBahan' => 'kerupuk'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '1V6id1j1vph2c-N1Ut6s0yP9EqeOTF8O'
+    'advanced-api' => 'cje7jug9k2tivj92bhqrnoe7v0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'd66f47e0-5ee5-4e00-9800-26e8f01aeccc'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------632202311708566861289193'
+    'HTTP_COOKIE' => '_csrf=1V6id1j1vph2c-N1Ut6s0yP9EqeOTF8O; advanced-api=cje7jug9k2tivj92bhqrnoe7v0'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '51140'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174641.6015
+    'REQUEST_TIME' => 1692174641
+]
+2023-08-16 08:31:55 [127.0.0.1][1][bagb1mjelil7j8noos64n75nbk][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\web\Request::getBodyParam(), 0 passed in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php on line 138 and at least 1 expected in /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Request.php:632
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(138): yii\web\Request->getBodyParam()
+#1 [internal function]: api\controllers\SiteController->actionUpdateKategoriAtauBahan('bahan', '1')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:31:55 [127.0.0.1][1][bagb1mjelil7j8noos64n75nbk][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'TmH_q6IbaC-tNPfiq1vyWTRZSfQdWURh'
+    'advanced-api' => 'm91ifvkppico884eaqji6f8evg'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '87716122-58cf-4072-a9a7-7ebb9114e6e5'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------554355672237825851000874'
+    'HTTP_COOKIE' => '_csrf=TmH_q6IbaC-tNPfiq1vyWTRZSfQdWURh; advanced-api=m91ifvkppico884eaqji6f8evg'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '51247'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174715.0645
+    'REQUEST_TIME' => 1692174715
+]
+2023-08-16 08:34:09 [127.0.0.1][1][b8kojjclm7knlgmlt1ckh79soh][error][Error] Error: Cannot use object of type stdClass as array in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:140
+Stack trace:
+#0 [internal function]: api\controllers\SiteController->actionUpdateKategoriAtauBahan('bahan', '1')
+#1 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#6 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2023-08-16 08:34:09 [127.0.0.1][1][b8kojjclm7knlgmlt1ckh79soh][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '86x1r-dchLeo5mjRgpESTSRRtuJ5Zh5U'
+    'advanced-api' => 'aq6i0nlfed6dnt9arvbj9cbh4f'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '79423fdd-5112-43fa-9f99-a5c65b14a9df'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------634304475649242624246115'
+    'HTTP_COOKIE' => '_csrf=86x1r-dchLeo5mjRgpESTSRRtuJ5Zh5U; advanced-api=aq6i0nlfed6dnt9arvbj9cbh4f'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '51433'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692174849.4647
+    'REQUEST_TIME' => 1692174849
+]
+2023-08-16 08:37:42 [127.0.0.1][1][27fsqudlekcb8mok8scvfbebbh][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: namaKategoriAtauBahan in /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php:141
+Stack trace:
+#0 /Users/rizky/Sites/restoran-app/api/controllers/SiteController.php(141): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/Users/rizky/Si...', 141, Array)
+#1 [internal function]: api\controllers\SiteController->actionUpdateKategoriAtauBahan('bahan', '1')
+#2 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update-kategori...', Array)
+#5 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/update-kat...', Array)
+#6 /Users/rizky/Sites/restoran-app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(common\components\Request))
+#7 /Users/rizky/Sites/restoran-app/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2023-08-16 08:37:42 [127.0.0.1][1][27fsqudlekcb8mok8scvfbebbh][info][application] $_GET = [
+    'kategoriAtauBahan' => 'bahan'
+    'idKategoriAtauBahan' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'bFnj8qzJViRJXpoTmVpv11z9Tu4xzAmo'
+    'advanced-api' => 'jbqjdachl4b0r7j1tavod3h4k2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'h7a77o4n5JCM0u6RL2a9YV3Cc_Z76SfA'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.32.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '5f940a93-7634-4b86-881b-5a58c7c9db45'
+    'HTTP_HOST' => 'restoran-app.test'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------359404147994129790258481'
+    'HTTP_COOKIE' => '_csrf=bFnj8qzJViRJXpoTmVpv11z9Tu4xzAmo; advanced-api=jbqjdachl4b0r7j1tavod3h4k2'
+    'CONTENT_LENGTH' => '183'
+    'PATH' => '/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.54 (Unix) PHP/7.4.33'
+    'SERVER_NAME' => 'restoran-app.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/rizky/Sites/restoran-app'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/rizky/Sites/restoran-app/api/web/index.php'
+    'REMOTE_PORT' => '51719'
+    'REDIRECT_URL' => '/api/site/update-kategori-atau-bahan'
+    'REDIRECT_QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PATCH'
+    'QUERY_STRING' => 'kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'REQUEST_URI' => '/api/site/update-kategori-atau-bahan?kategoriAtauBahan=bahan&idKategoriAtauBahan=1'
+    'SCRIPT_NAME' => '/api/web/index.php'
+    'PHP_SELF' => '/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1692175062.1729
+    'REQUEST_TIME' => 1692175062
+]
